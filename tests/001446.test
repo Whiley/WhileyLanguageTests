@@ -8,7 +8,7 @@ public export method test():
    assert read([1,2,3],1) == 2
    assert read([1,2,3],2) == 3   
 ---
-E724 main.whiley 19,11:23
+E724 main.whiley 2,16
 =====
 >>> main.whiley 1:2
 property read(int[] items, int i) -> (int v)

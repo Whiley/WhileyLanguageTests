@@ -1,3 +1,4 @@
+js.execute.ignore=true
 ====
 >>> main.whiley
 function f(int x, int y) -> int:
