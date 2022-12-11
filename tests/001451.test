@@ -1,0 +1,25 @@
+=====
+>>> main.whiley
+type uint is (int n) where n >= 0
+
+function loopy(int x, uint y) -> (int z)
+ensures z == (x*y):
+    z = 0
+    uint i = y
+    while i != 0
+    where z == (x*y) - (x*i):
+        z = z + x
+        i = i - 1
+    return z
+
+public export method test():
+    assert loopy(0,1) == 0
+    assert loopy(1,0) == 0    
+    assert loopy(1,1) == 1
+    assert loopy(1,2) == 2
+    assert loopy(2,1) == 2
+    assert loopy(2,2) == 4
+    assert loopy(3,2) == 6
+    assert loopy(2,3) == 6
+    assert loopy(3,3) == 9
+---
